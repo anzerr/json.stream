@@ -1,10 +1,10 @@
 
 ### `Intro`
-parse streamed json
+Split a streamed json into parsable chunks.
 
 #### `Install`
 ``` bash
-npm install --save git+https://git@github.com/anzerr/json.stream.git
+npm install --save git+https://github.com/anzerr/json.stream.git
 ```
 
 ### `Example`
