@@ -1,6 +1,6 @@
 
 ### `Intro`
-parse streamed json
+Split a streamed json into parsable chunks.
 
 #### `Install`
 ``` bash
