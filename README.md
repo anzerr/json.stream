@@ -4,7 +4,8 @@ parse streamed json
 
 #### `Install`
 ``` bash
-npm install --save git+https://git@github.com/anzerr/json.stream.git
+npm install --save git+https://github.com/anzerr/json.stream.git
+npm install --save @anzerr/json.stream
 ```
 
 ### `Example`
