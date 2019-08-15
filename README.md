@@ -10,13 +10,16 @@ npm install --save @anzerr/json.stream
 
 ### `Example`
 ``` javascript
-const JsonStream = require('json.stream');
+const {JsonStream, Parser} = require('json.stream');
 
 let s = new JsonStream();
 
 s.on('data', (chunk) => {
 	console.log(JSON.parse(chunk.toString()));
 });
+
+let p = new Parser();
+console.log(p.push('{"cat":1}{"cat":2}{"cat":3}').process());
 
 s.write('{"cat":1}{"cat":2}{"cat":3}');
 ```

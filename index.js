@@ -19,4 +19,11 @@ class JsonStream extends Transform {
 
 }
 
-module.exports = JsonStream;
+module.exports = {
+	JsonStream,
+	Parser,
+	parse = (data) => {
+		let p = new Parser();
+		return p.push(data).process();
+	}
+};
