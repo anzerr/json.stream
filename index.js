@@ -22,7 +22,7 @@ class JsonStream extends Transform {
 module.exports = {
 	JsonStream,
 	Parser,
-	parse = (data) => {
+	parse: (data) => {
 		let p = new Parser();
 		return p.push(data).process();
 	}
