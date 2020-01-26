@@ -1,11 +1,12 @@
 
-const JsonStream = require('./index.js'),
+const {JsonStream} = require('./index.js'),
 	pack = require('./package.json'),
 	packlock = require('./package-lock.json');
 
 let s = new JsonStream();
 
-setInterval(() => {
+let tick = 0;
+const think = setInterval(() => {
 	let data = '';
 	for (let i = 0; i < 200; i++) {
 		let r = Math.floor(Math.random() * 5);
@@ -22,6 +23,10 @@ setInterval(() => {
 		}
 	}
 	s.write(data);
+	if (tick > 10) {
+		clearInterval(think);
+	}
+	tick += 1;
 }, 100);
 
 let found = 1, valid = 1;
@@ -30,7 +35,8 @@ s.on('data', (chunk) => {
 		JSON.parse(chunk.toString());
 		valid++;
 	} catch (e) {
-		found++;
+		//
 	}
+	found++;
 	console.log(found, valid);
 });

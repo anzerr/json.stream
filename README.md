@@ -1,5 +1,7 @@
 
 ### `Intro`
+![GitHub Actions status | publish](https://github.com/anzerr/json.stream/workflows/publish/badge.svg)
+
 Split a streamed json into parsable chunks.
 
 #### `Install`
