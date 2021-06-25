@@ -1,6 +1,6 @@
 {
 	"name": "json.stream",
-	"version": "1.0.14",
+	"version": "1.0.15",
 	"description": "Pipe a stream of grouped JSON objects emits split parsable JSON buffers",
 	"keywords": [
 		"json",
